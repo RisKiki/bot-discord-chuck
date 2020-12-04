@@ -69,6 +69,7 @@ class App {
                         break;
                 }
             } else {
+                console.log('Bot : '+msg.content)
                 tools.logBotMessage(msg.author.username, msg.content);
             }
         });
