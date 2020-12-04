@@ -4,6 +4,7 @@
   "description": "Bot discord for chuck norris joke's",
   "main": "index.js",
   "scripts": {
+    "start-prod":"pm2 start server.js --name bot-discord-chuck --log /home/ubuntu/logs/bot-discord-chuck",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
