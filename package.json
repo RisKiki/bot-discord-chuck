@@ -4,6 +4,7 @@
   "description": "Bot discord for chuck norris joke's",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/RisKiki/bot-discord-chuck/issues"
   },
-  "homepage": "https://github.com/RisKiki/bot-discord-chuck#readme"
+  "homepage": "https://github.com/RisKiki/bot-discord-chuck#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
 }
