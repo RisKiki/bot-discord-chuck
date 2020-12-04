@@ -18,13 +18,13 @@ class JokeCategories {
                     res.data.value.join(', ')
                     this.message.channel.send('[Categories] '+res.data.value.join(', '))
                 } else {
-                    this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.');
+                    this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.');
                 }
             }
         ).catch(
             err => {
                 console.log(err);
-                this.message.channel.send('Chuck Norris à casser ses blagues, veuillez ressayer plus tard.');
+                this.message.channel.send('Chuck Norris broke his jokes, please try again later.');
             }
         )
     }

@@ -1,7 +1,8 @@
 const axios          = require('axios');
 const Joke           = require('./commands/joke');
 const JokeCategories = require('./commands/jokeCategories');
-const JokeCount      = require('./commands/jokeCount.js')
+const JokeCount      = require('./commands/jokeCount.js');
+const Ping = require('./commands/ping');
 
 class App {
 
@@ -46,7 +47,7 @@ class App {
                     break;
         
                 case '%ping':
-                    ping(args, msg);
+                    new Ping(args, msg).pong();
                     break;
         
                 case '%prefix':

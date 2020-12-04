@@ -15,15 +15,15 @@ class JokeCount {
         .then(
             res => {
                 if (res.data.type === 'success') {
-                    this.message.channel.send('Chuko Norris possède ' + res.data.value.toString() + ' jokes !')
+                    this.message.channel.send('Chuko Norris has ' + res.data.value.toString() + ' jokes !')
                 } else {
-                    this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.');
+                    this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.');
                 }
             }
         ).catch(
             err => {
                 console.log(err);
-                this.message.channel.send('Chuck Norris à casser ses blagues, veuillez ressayer plus tard.');
+                this.message.channel.send('Chuck Norris broke his jokes, please try again later.');
             }
         )
     }

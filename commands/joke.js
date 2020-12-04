@@ -26,7 +26,7 @@ class Joke {
     }
 
     // sendErrorArgs() {
-    //     this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.')
+    //     this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.')
     // }
 
     getById(id) {
@@ -36,13 +36,13 @@ class Joke {
                 if (res.data.type === 'success') {
                     this.message.channel.send('[Blague '+ res.data.value.id +'] '+res.data.value.joke)
                 } else {
-                    this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.');
+                    this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.');
                 }
             }
         ).catch(
             err => {
                 console.log(err);
-                this.message.channel.send('Chuck Norris à casser ses blagues, veuillez ressayer plus tard.');
+                this.message.channel.send('Chuck Norris broke his jokes, please try again later.');
             }
         )
     }
@@ -57,13 +57,13 @@ class Joke {
                     this.message.channel.send('This categorie doesn\'t exist. There are allow categorie :');
                     new JokeCategories(this.args, this.message).get();
                 } else {
-                    this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.');
+                    this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.');
                 }
             }
         ).catch(
             err => {
                 console.log(err);
-                this.message.channel.send('Chuck Norris à casser ses blagues, veuillez ressayer plus tard.');
+                this.message.channel.send('Chuck Norris broke his jokes, please try again later.');
             }
         )
     }
@@ -75,13 +75,13 @@ class Joke {
                 if (res.data.type === 'success') {
                     this.message.channel.send('[Blague '+ res.data.value.id +'] '+res.data.value.joke)
                 } else {
-                    this.message.channel.send('Chuck Norris ne lit pas le moldu, ré-écrit, en mieux.');
+                    this.message.channel.send('Chuck Norris doesn\'t read Muggle, rewrite, only better.');
                 }
             }
         ).catch(
             err => {
                 console.log(err);
-                this.message.channel.send('Chuck Norris à casser ses blagues, veuillez ressayer plus tard.');
+                this.message.channel.send('Chuck Norris broke his jokes, please try again later.');
             }
         )
     }
