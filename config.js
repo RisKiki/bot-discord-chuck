@@ -3,7 +3,8 @@ var myConfig = {
     ID_BOT              : '784001203600097281',
     PREFIX_FILE_PATH    : './static/prefix',
     PREFIX_FILE_ENCODING: 'utf-8',
-    MAX_JOKE            : 3
+    MAX_JOKE            : 3,
+    LOG_FOLDER          : 'logs'
 }
 
 module.exports = myConfig

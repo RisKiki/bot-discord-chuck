@@ -35,6 +35,8 @@ class App {
     listenMessage() {
         this.client.on('message', msg => {
             if (msg.author.id !== this.config.ID_BOT) {
+                tools.logUserMessage(msg.author.id, msg.author.username, msg.content)
+
                 const params      = msg.content.split(' ')
                 const prefix      = params[0];
                 const args        = params.slice(1,params.length);
@@ -66,6 +68,8 @@ class App {
                     default:
                         break;
                 }
+            } else {
+                tools.logBotMessage(msg.author.username, msg.content);
             }
         });
     }
