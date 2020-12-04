@@ -12,17 +12,17 @@ class Joke {
     }
 
     sendJoke() {
-        console.log("args", this.args)
         if (this.args.length === 0){
             this.getRandom();
-        }
-        // for (let i = 0; i < this.args.length; i++) {
-        if (parseInt(this.args[0])) {
-            this.getById(parseInt(this.args[0]))
         } else {
-            this.getRandomByCategory(this.args[0])
+            for (let i = 0; i < this.args.length; i++) {
+                if (parseInt(this.args[0])) {
+                    this.getById(parseInt(this.args[i]))
+                } else {
+                    this.getRandomByCategory(this.args[i])
+                }
+            }
         }
-        // }
     }
 
     // sendErrorArgs() {
