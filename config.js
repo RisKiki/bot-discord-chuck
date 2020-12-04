@@ -1,8 +1,9 @@
-const TOOLS = require('./tools')
-
 var myConfig = {
-    DISCORD_TOKEN: process.env.DISCORD_TOKEN,
-    ID_BOT       : '784001203600097281'
+    DISCORD_TOKEN       : process.env.DISCORD_TOKEN,
+    ID_BOT              : '784001203600097281',
+    PREFIX_FILE_PATH    : './static/prefix',
+    PREFIX_FILE_ENCODING: 'utf-8',
+    MAX_JOKE            : 3
 }
 
 module.exports = myConfig

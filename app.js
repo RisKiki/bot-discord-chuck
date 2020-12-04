@@ -35,16 +35,16 @@ class App {
     listenMessage() {
         this.client.on('message', msg => {
             if (msg.author.id !== this.config.ID_BOT) {
-                const params = msg.content.split(' ')
-                const prefix = params[0];
-                const args   = params.slice(1,params.length);
-
+                const params      = msg.content.split(' ')
+                const prefix      = params[0];
+                const args        = params.slice(1,params.length);
                 const validPrefix = this.prefix;
             
                 console.log("params",params)
+
                 switch(prefix) {
                     case validPrefix:
-                        new Joke(args, msg).sendJoke()
+                        new Joke(args, msg).sendJoke();
                         break;
             
                     case validPrefix + 'Count':
@@ -61,7 +61,6 @@ class App {
             
                     case '%prefix':
                         this.prefix = new Prefix(args, msg, this.prefix).changePrefix();
-                        
                         break;
             
                     default:
