@@ -35,7 +35,6 @@ function writeLogFile(message) {
     const millisecondes = date.getMilliseconds();
 
     const format = '['+year+'/'+month+'/'+day+' - '+hours+':'+minutes+':'+secondes+':'+millisecondes+'] \n  '
-    console.log(__filename)
 
     fs.mkdir(config.LOG_FOLDER, { recursive: true }, (err) => {
         if (err) console.log('MKDIR ERROR ', err)

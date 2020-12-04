@@ -69,7 +69,7 @@ class App {
                         break;
                 }
             } else {
-                console.log('Bot : '+msg.content)
+                console.log('Bot : '+__dirname+' | '+msg.content)
                 tools.logBotMessage(msg.author.username, msg.content);
             }
         });
