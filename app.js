@@ -45,24 +45,28 @@ class App {
                 console.log("params",params)
 
                 switch(prefix) {
-                    case validPrefix:
+                    case validPrefix+"joke":
                         new Joke(args, msg).sendJoke();
                         break;
             
-                    case validPrefix + 'Count':
+                    case validPrefix + 'jokeCount':
                         new JokeCount(args, msg).getCount();
                         break;
             
-                    case validPrefix + 'Categories':
+                    case validPrefix + 'jokeCategories':
                         new JokeCategories(args, msg).get();
                         break;
             
-                    case '%ping':
+                    case validPrefix + 'ping':
                         new Ping(args, msg).pong();
                         break;
             
-                    case '%prefix':
+                    case validPrefix + 'prefix':
                         this.prefix = new Prefix(args, msg, this.prefix).changePrefix();
+                        break;
+
+                    case validPrefix + 'help':
+                        msg.channel.send('Go to : https://github.com/RisKiki/bot-discord-chuck !');
                         break;
             
                     default:
