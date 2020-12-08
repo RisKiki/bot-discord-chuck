@@ -39,5 +39,8 @@ WARNING ! You have to add your bot to a discord server, go [here](https://discor
 | %prefic [prefix] | Change prefix |
 | %help | Help |
 
+## Logs
+Vous can find logs in logs files.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
