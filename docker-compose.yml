@@ -1,0 +1,11 @@
+version: '2'
+services: 
+    discord-bot :
+        container_name: discord-bot
+        build: .
+        volumes:
+            - .:/usr/src/app/
+            - /usr/src/app/node_modules
+        ports:
+            - '8181:8080'
+            
