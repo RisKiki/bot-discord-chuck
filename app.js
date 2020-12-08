@@ -1,4 +1,5 @@
 const axios          = require('axios');
+const Help = require('./commands/help');
 const Joke           = require('./commands/joke');
 const JokeCategories = require('./commands/jokeCategories');
 const JokeCount      = require('./commands/jokeCount.js');
@@ -66,7 +67,7 @@ class App {
                         break;
 
                     case validPrefix + 'help':
-                        msg.channel.send('Go to : https://github.com/RisKiki/bot-discord-chuck !');
+                        new Help(this.prefix, msg).sendHelp();
                         break;
             
                     default:
