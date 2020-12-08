@@ -5,22 +5,22 @@ Technologies : NodeJs and Docker
 
 ## Start with Bot Chuck Norris
 
-Run `git clone https://github.com/RisKiki/angular-news-api.git` to get the project. \
+Run `git clone https://github.com/RisKiki/angular-news-api.git` to get the project. 
 
-- With start
+### With start
 
 Replace MY_TOKEN by your's \
-Run `cd angular-news-api && ./start.sh MY_TOKEN` \
+Run `cd angular-news-api && ./start.sh MY_TOKEN` 
 
 if there is an error please \
-Run `sudo chmod +x start.sh && ./start.sh MY_TOKEN` \
+Run `sudo chmod +x start.sh && ./start.sh MY_TOKEN` 
 
 Now your bot is running, enjoy !
 
-- By your own
+### By your own
 
 Replace MY_TOKEN by your's \
-Run `cd angular-news-api && touch .env && echo "DISCORD_TOKEN='MY_TOKEN'" >> .env && docker compose up` \
+Run `cd angular-news-api && touch .env && echo "DISCORD_TOKEN='MY_TOKEN'" >> .env && docker compose up` 
 
 Now your bot is running, enjoy !
 
