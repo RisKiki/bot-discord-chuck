@@ -67,14 +67,14 @@ class App {
                         break;
 
                     case validPrefix + 'help':
-                        new Help(this.prefix, msg).sendHelp();
+                        new Help(this.prefix, msg, this.nameBot).sendHelp();
                         break;
             
                     default:
                         break;
                 }
             } else {
-                console.log('Bot : '+__dirname+' | '+msg.content)
+                console.log('Bot : '+msg.content)
                 tools.logBotMessage(msg.author.username, msg.content);
             }
         });

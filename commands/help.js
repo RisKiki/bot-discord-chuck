@@ -5,13 +5,16 @@ class Help {
 
     prefix;
     message;
+    nameBot;
 
     constructor(
         prefix,
-        message
+        message,
+        nameBot
     ){
         this.prefix  = prefix;
-        this.message = message
+        this.message = message;
+        this.nameBot = nameBot;
     }
 
     sendHelp() {
@@ -50,7 +53,7 @@ class Help {
         .setColor(0xff0000)
         .setDescription('Change prefix');
 
-        this.message.channel.createWebhook(config.BOT_NAME, this.message.author.displayAvatarURL)
+        this.message.channel.createWebhook(this.nameBot, this.message.author.displayAvatarURL)
         .then(
             w => w.send(
                 {
