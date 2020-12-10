@@ -15,13 +15,17 @@ class Prefix {
     changePrefix() {
         const oldPrefix = this.currentPrefix;
         const newPrefix = this.args.join(' ');
-        tools.setPrefix(newPrefix);
-        if (tools.getPrefix() === newPrefix) {
-            this.message.channel.send('ATTENTION TOUT LE MONDE ! ' + oldPrefix + ' se transforme et devient ' + newPrefix);
-            return newPrefix;
+        if (newPrefix.length < 2) {
+            tools.setPrefix(newPrefix);
+            if (tools.getPrefix() === newPrefix) {
+                this.message.channel.send('ATTENTION TOUT LE MONDE ! ' + oldPrefix + ' se transforme et devient ' + newPrefix);
+                return newPrefix;
+            } else {
+                this.message.channel.send('Prefix can\t be change. Should be an error.');
+                return oldPrefix;
+            }
         } else {
-            this.message.channel.send('Le préfix n\'as pas pu être changer.');
-            return oldPrefix;
+            this.message.channel.send('The prefix '+newPrefix+' is not correct ! This size must be one.')
         }
     }
 }
