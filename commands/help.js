@@ -53,22 +53,21 @@ class Help {
         .setColor(0xff0000)
         .setDescription('Change prefix');
 
-        this.message.channel.createWebhook(this.nameBot, this.message.author.displayAvatarURL)
-        .then(
-            w => w.send(
-                {
-                    embeds: [
-                        joke,
-                        jokeByID,
-                        jokeByCategorie,
-                        jokeCategories,
-                        jokeCount,
-                        ping,
-                        prefix
-                    ]
-                }
-            )
-        );
+        const help = new MessageEmbed()
+        .setTitle(`Help`)
+        .setColor(0xff0000)
+        .setDescription('Here is all the commands for the bot :')
+        .addFields(
+            { name: `${this.prefix}joke`, value: 'Get a random joke' },
+            { name: `${this.prefix}joke [id]`, value: 'Get joke identified by it id' },
+            { name: `${this.prefix}joke [category]`, value: 'Get a random joke in this category' },
+            { name: `${this.prefix}jokeCount`, value: 'Get the number of joke\'s' },
+            { name: `${this.prefix}jokeCategories`, value: 'Get all joke\'s categories' },
+            { name: `${this.prefix}ping`, value: 'Get pong and latency' },
+            { name: `${this.prefix}prefix`, value: 'Change prefix' }
+        )
+
+        this.message.channel.send(help);
     }
 }
 

@@ -26,6 +26,7 @@ class Prefix {
             }
         } else {
             this.message.channel.send('The prefix '+newPrefix+' is not correct ! This size must be one.')
+            return oldPrefix;
         }
     }
 }
